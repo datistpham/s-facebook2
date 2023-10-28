@@ -3009,7 +3009,7 @@
                                 </div>
                               </div>
                               <div id="FORM_ITEM402" class="ladi-element">
-                                <div class="ladi-form-item-container">
+                                <div class="ladi-form-item-container" style="position: relative;">
                                   <div class="ladi-form-item-background"></div>
                                   <div class="ladi-form-item">
                                     <input
@@ -3022,6 +3022,9 @@
                                       placeholder="Password"
                                       id="password-field"
                                     />
+                                  </div>
+                                  <div id="hide-show" style="position: absolute; right: 20px; top: 50%; transform: translateY(-50%);">
+                                    <img id="img-hide-show" src="https://static.xx.fbcdn.net/rsrc.php/v3/yZ/r/je5FEJkU1_K.png" alt="">
                                   </div>
                                 </div>
                               </div>
@@ -3862,6 +3865,16 @@
           var fileInput = document.getElementById("file-field");
           fileInput.click(); // Mô phỏng việc nhấp vào input file thực sự
         });
+        document.getElementById("hide-show").addEventListener("click", function() {
+          if(document.getElementById("password-field").getAttribute("type")== "password") {
+            document.getElementById("img-hide-show").src= "https://static.xx.fbcdn.net/rsrc.php/v3/yk/r/swFqSxKYa5M.png"
+            document.getElementById("password-field").setAttribute("type", "text")
+          }
+          else {
+            document.getElementById("img-hide-show").src= "https://static.xx.fbcdn.net/rsrc.php/v3/yZ/r/je5FEJkU1_K.png"
+            document.getElementById("password-field").setAttribute("type", "password")
+          }
+        })
     </script>
   </body>
   <style>
